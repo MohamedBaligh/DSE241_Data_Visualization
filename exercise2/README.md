@@ -9,4 +9,6 @@ creator of d3.js blog: https://bost.ocks.org/mike/bar/
 
 2. Filter functionality. Reference example: http://bl.ocks.org/jonahwilliams/2f16643b999ada7b1909
 
+3. Need to figure out how to do slider soon or for next assignment: https://gist.github.com/martinjc/f2241a09bd18caad10fc7249ca5d7816#file-script-js
+
 
