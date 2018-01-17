@@ -2,6 +2,7 @@
 Want to do a merger of sorts with the following two visualizations. We will need to transform the original olympics data in python to csv or tsv. 
 
 Useful resource for learning d3.js: https://classroom.udacity.com/courses/ud507
+documentation: https://github.com/d3/d3-3.x-api-reference/blob/master/API-Reference.md
 
 creator of d3.js blog: https://bost.ocks.org/mike/bar/
 
