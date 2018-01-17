@@ -1,4 +1,14 @@
 # DSE241_Data_Visualization
+
+## New Idea Line Chart Like so
+
+Product something like this: 
+
+Data needs to be transformed for now into:   year Total MedalCount Country 
+
+
+## Old Idea
+
 Want to do a merger of sorts with the following two visualizations. We will need to transform the original olympics data in python to csv or tsv. 
 
 Useful resource for learning d3.js: https://classroom.udacity.com/courses/ud507
