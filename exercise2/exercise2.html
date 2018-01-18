@@ -7,16 +7,6 @@
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <style type="text/css">
 
- 	body {
-		margin: 0;		
-		font-family: Helvetica, Arial, sans-serif;
-		background-color: white;
-		background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Olympic_Rings.svg/800px-Olympic_Rings.svg.png");
-	    background-repeat: no-repeat;
-	    background-position: center top;
-	    background-size: 15%;
-	}
-
 	section {
 		width: 75%;
 	    margin: auto;
@@ -76,6 +66,7 @@
         font-size: 11px;
     }
 
+
     #tooltip {
         position: absolute;
         text-align: center;
@@ -116,7 +107,6 @@
 	<br></br>
 	<h1 align="center"> Winter Olympics: 1924 - 2006 </h1>	
 	</div>
-
 
 	<section>
 
@@ -160,7 +150,6 @@
 				y: +d[c]};
 			});
     	});		
-
 
 	stack(data_y)
 	console.log(data_y)
@@ -219,12 +208,6 @@
         .append('g')
         .style('fill', function (d, i) {return colours(i);});
 
-	/*var toolLabel = d3.select("#chart1")
-		.append("div")   
-		.attr("class", "tooltip")               
-		//.style("opacity", 0)
-		.html(" ");	*/
-
 	var rects = groups.selectAll('rect')
         .data(function (d) {return d;})
         .enter()
@@ -244,7 +227,8 @@
         	d3.select('#tooltip').classed('hidden', false);})
         .on('mouseout', function () {
         	d3.select('#tooltip').classed('hidden', true);}) ;        
-      		  
+    
+ 		  
 	rects.transition()
 		.delay(function(d, i) {return i * 200;})
 		.duration(500)
@@ -287,8 +271,8 @@
 	//x.domain(d3.extent(data, function(d) { return parseDate.parse(d.date); }));
 		
     // define the x scale (horizontal)
-    var mindt = "1896",
-        maxdt = "2008";
+    var mindt = "1924",
+    maxdt = "2006";
 
 	var x = d3.time.scale()
 	    .range([0, width])
@@ -306,8 +290,6 @@
 	    .scale(x)
 	    .orient("bottom")
 	    .ticks(30);
-	    //.tickFormat(function(d) {return dtFormat.parse(d);});
-
 
 	var yAxis = d3.svg.axis()
 	    .scale(y)
@@ -355,8 +337,6 @@
 	};
 	}));
 	console.log(data_a)
-	//console.log(data_a[1])	
-	//console.log(data_a[1].values[25])
 
 	var totals = [];
 
@@ -367,7 +347,6 @@
 		}
 	}		
 	y.domain([0, d3.max(totals)]);
-	//console.log(y.domain())
 
 	var data_a = svg.selectAll("path")
 		.data(data_a)
@@ -405,8 +384,6 @@
 	    .text("Medal Count By Gender");
 
 	});
-
-
 
 	</script>
 	</section>
