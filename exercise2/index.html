@@ -111,7 +111,7 @@
 	    <p><span id="value">100</span>
 	</div>
 
-	<p align="left" style="font-size:16px","font-family:verdana">Five years after the birth of the Olympics in 1896, the Nordic Games established the first international competition for winter sport where only Scandinavian countries competition. The popularity of winter sports increased with figure skating being recognized an official Olympic sport in 1908 and ice hockey in 1920. It wasn’t until 1924 winter games held in Chamonix, France where equality for winter sports was organized, these games would later be recognized as the first official Winter Olympics. As with any competition, it is important to track the accomplishments and so, an overall summary of medals won is shown.</p>	
+	<p align="left" style="font-size:16px","font-family:verdana">Five years after the birth of the Olympics in 1896, the Nordic Games established the first international competition for winter sport where only Scandinavian countries competition. The popularity of winter sports increased with figure skating being recognized an official Olympic sport in 1908 and ice hockey in 1920. It wasn’t until 1924 that gender equality started to exist for winter sports at what would later be recognized as the first official Winter Olympics. Notably, women initially competed in a small subset of the existing events. The graphs below show an overall summary of medals won to ascertain which countries have historically done a good job representing their female athletes.</p>	
 	
 	
 	<div id="wrap">
@@ -130,7 +130,7 @@
 
 
 	// Get the Medal By Country data
-	d3.csv("Medal_Country_men.csv", function(data) {		
+	d3.csv("data/Medal_Country_men.csv", function(data) {		
 
 	var header = ["Gold", "Silver", "Bronze"];
 	var stack = d3.layout.stack();
@@ -266,7 +266,7 @@
 	    height = 600 - margin.top - margin.bottom;
 
 	// Get the Medal By Country data
-	d3.csv("Medal_Country_women.csv", function(data) {		
+	d3.csv("data/Medal_Country_women.csv", function(data) {		
 
 	var header = ["Gold", "Silver", "Bronze"];
 	var stack = d3.layout.stack();
