@@ -21,27 +21,24 @@
 		margin-top: 25px;
 		margin-bottom: 25px;
 	}
-
-	#chart1 {
-		position: relative;
-		width: auto;
-		height: auto;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10px;		
-		padding: 5px;
-		background-color: white;		
+	
+	#wrap {
+		width: 1000px;
 	}
 
-	#chart2 {
-		width: auto;
+	.chart1 {
+		width:500px;
+		background-color:blue;
 		height: auto;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10px;		
-		padding: 5px;
-		background-color: white;		
-	}	
+		float: left;
+	}
+
+	.chart2 {
+		width:500px;
+		background-color: black;
+		height: auto;
+		float: right;		
+	}
 
 	h1 {
 		font-size: 28px;
@@ -114,23 +111,26 @@
 	    <p><span id="value">100</span>
 	</div>
 
-	<p align="center" style="font-size:16px","font-family:verdana">Add in some insightful explanation!!!!!!!!!!</p>	
-
-	<div id="chart1" align="center" ></div>
-	<div id="chart2" align="center" >
-			<p align="center" style="font-size:16px","font-family:verdana"> Enter new information here which is a useful explanation!!!! </p>		
+	<p align="left" style="font-size:16px","font-family:verdana">Five years after the birth of the Olympics in 1896, the Nordic Games established the first international competition for winter sport where only Scandinavian countries competition. The popularity of winter sports increased with figure skating being recognized an official Olympic sport in 1908 and ice hockey in 1920. It wasn’t until 1924 winter games held in Chamonix, France where equality for winter sports was organized, these games would later be recognized as the first official Winter Olympics. As with any competition, it is important to track the accomplishments and so, an overall summary of medals won is shown.</p>	
+	
+	
+	<div id="wrap">
+		<div id="chart1" align="center" ></div>
+		<div id="chart2" align="center" >
+			<p align="left" style="font-size:16px","font-family:verdana"><i> Created by: Michael Galarnyk, Orysya Stus, Garrett Cheung</i>
+ </p></div>
 	</div>
 		
 	<script type="text/javascript">	
 
 	var divW = document.getElementById("chart1");
-	var width = divW.clientWidth*0.70;
+	var width = divW.clientWidth*0.30;
 	var height = 900;	
 	var padding = [ 50, 10, 20, 150 ];  //Top, right, bottom, left
 
 
 	// Get the Medal By Country data
-	d3.csv("Medal_Country.csv", function(data) {		
+	d3.csv("Medal_Country_men.csv", function(data) {		
 
 	var header = ["Gold", "Silver", "Bronze"];
 	var stack = d3.layout.stack();
@@ -252,7 +252,7 @@
 		.attr("y", (padding[0]-30))		
 	    .style("text-anchor", "end")
 	    .style("font-size", "12px")
-	    .text("Medal Count for Participating Countries");
+	    .text("Overall Medal Count for Men");
 
 	});
 
@@ -261,20 +261,12 @@
 	var divW = document.getElementById("chart2");
 
 	var margin = {top: 50, right: 10, bottom: 20, left: 150};
-	// var padding = [ 50, 10, 20, 150 ];  //Top, right, bottom, left
 
 	var width = divW.clientWidth*0.65 - margin.left - margin.right,
 	    height = 600 - margin.top - margin.bottom;
 
-		
-	// var divW = document.getElementById("chart1");
-	// var width = divW.clientWidth*0.70;
-	// var height = 900;	
-	// var padding = [ 50, 10, 20, 150 ];  //Top, right, bottom, left
-
-
 	// Get the Medal By Country data
-	d3.csv("Medal_Country.csv", function(data) {		
+	d3.csv("Medal_Country_women.csv", function(data) {		
 
 	var header = ["Gold", "Silver", "Bronze"];
 	var stack = d3.layout.stack();
@@ -402,7 +394,7 @@
 		.attr("y", (padding[0]-30))		
 	    .style("text-anchor", "end")
 	    .style("font-size", "12px")
-	    .text("Medal Count for Participating Countries");
+	    .text("Overall Medal Count for Women");
 
 	});
 
