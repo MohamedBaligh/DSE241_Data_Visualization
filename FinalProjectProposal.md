@@ -1,4 +1,4 @@
-## Final Project Proposal
+# Final Project Proposal
 This is in type form rather than slide show to organize before making the file pretty. 
 
 ## Dataset: Identify and describe a publicly available dataset that will be used for this project
