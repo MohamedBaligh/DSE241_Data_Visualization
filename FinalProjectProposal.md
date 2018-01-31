@@ -42,7 +42,11 @@ Public.
 ## Final Proposal will obviously be in [slides](https://docs.google.com/presentation/d/1MfLvaYL1ykk9bxoKk0ij5tJ4mxmXP_U63pgFJLAyQ8w/edit?ts=5a6e8255#slide=id.g3295baa2ef_0_0)
 
 
-
+Articles Orysya Sent: 
+https://news.nationalgeographic.com/2015/07/150709-shark-attacks-california-pew-study-risk-science/
+https://www.floridamuseum.ufl.edu/fish/isaf/home/
+San Diego Interest: http://www.sacbee.com/site-services/databases/article147964164.html
+http://www.independent.co.uk/news/science/shark-attacks-rise-cause-humans-climate-change-pollution-tourism-impact-a7377576.html
   
   
   
