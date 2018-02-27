@@ -18,24 +18,65 @@
         height: 100vh;
       }
 
-      .leaflet-control-container .leaflet-timeline-controls{
-      } 
-
-
+      .leaflet-control-container .leaflet-timeline-control .leaflet-routing-container-hide{
+          height: 200px
+          
+      }
+    
       .sldr-ctrl-container {
           justify-content: center;
           text-align: center;
       }
+    
+    .button-container {
+        float:left;
+        display:inline;
+        margin: 0;
+        position: absolute;
+        top: 80%;
+        left: 10%;
+
+    }
+    
+    .time-slider {
+        float:right;
+        display:inline;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 59%;
+        transform: translate(-50%, -50%);
+        
+    }
+    
+    .button-container{
+        float:left;
+        display:inline;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .time-text {
+        float:middle;
+        display:inline;
+        margin: 30;
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        color: white;
+        transform: translate(-50%, -50%);
+    }
+    
+    [id^="timeline-datalist"] {
+        display:none;
+    }
+    
       
 
-      .button-container {
-        text-align: center;
-        width: 100px;
-        position:relative;
-        top:50%; 
-        left:50%;
-        
-      }
+
 
      .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
       .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
@@ -55,13 +96,12 @@
                               , doubleClickZoom:false
                               , touchZoom:false}).setView([37, -120], 6);
 
+      // nobody will zoom in in any way shape or form to this map.
       map.touchZoom.disable();
       map.doubleClickZoom.disable();
       map.scrollWheelZoom.disable();
       map.boxZoom.disable();
       map.keyboard.disable();
-
-    
 
       L.tileLayer('https://api.mapbox.com/styles/v1/mgalarny/cje3sja7e12og2sjzkcdbqcbw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWdhbGFybnkiLCJhIjoiY2plMjJhdTFpMWY3ZDJ4cWxtMWhmc2NtZCJ9.zY_y_HYLvMOApvnrC6h5eA', {
         maxZoom: 18
@@ -118,10 +158,6 @@
         
         resetStyle.resetStyle(e.target);
         info.update();
-      }
-
-      function zoomToFeature(e) {
-        map.fitBounds(e.target.getBounds());
       }
 
       // ~~~~~~~~~~~~
