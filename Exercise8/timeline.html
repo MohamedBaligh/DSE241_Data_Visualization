@@ -1,12 +1,12 @@
 <html>
   <head>
     <title>Leaflet.timeline</title>
-    <script src="chroma.min.js"></script>
+    <script src="js/chroma.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" rel="stylesheet">
 
-    <script src="leaflet.timeline.js"></script>
+    <script src="js/leaflet.timeline.js"></script>
 
     <style>
       html, body{
@@ -31,6 +31,8 @@
         margin: 0;
         margin-bottom: 15px;
         color: #555;
+        opacity: 0.7;
+        background-color: #555;
 
       }
       
@@ -39,6 +41,7 @@
           justify-content: center;
           text-align: center;
           padding: 10px;
+
       }
 
 
@@ -91,10 +94,6 @@
         display:none;
     }
     
-      
-
-
-
      .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
       .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 16px; height: 16px; float: left; margin-right: 4px; opacity: 0.7; }
     </style>
@@ -154,6 +153,18 @@
           };
         }
 
+      function timelineStyle(feature) {
+          return {
+              fillColor: '#555',
+              weight: 2,
+              opacity: 1,
+              color: '#555',
+              dashArray: '3',
+              fillOpacity: 0.7
+          };
+      }
+
+
         function highlightFeature(e) {
           var layer = e.target;
 
@@ -195,10 +206,13 @@
 
         var timelineControl = L.timelineSliderControl({
           formatOutput: function(date){
-            return moment(date).format("YYYY-MM-DD");
+            return moment(date).add(1, 'days').format("YYYY-MM-DD");
           },
+          style: timelineStyle, 
           position: 'topright', 
-          enableKeyboardControls: true
+          enableKeyboardControls: true,
+          opacity: 0.7, 
+
         });
         timeline.addTo(map);
         timelineControl.addTo(map);
@@ -230,6 +244,6 @@
 
     legend.addTo(map);
     </script>
-    <script type="text/javascript" src="allyears.json"></script>
+    <script type="text/javascript" src="data/allyears.json"></script>
   </body>
 </html>
