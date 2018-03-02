@@ -18,33 +18,49 @@
         height: 100vh;
       }
 
-      .leaflet-control-container .leaflet-timeline-control .leaflet-routing-container-hide{
+      .leaflet-control-container .leaflet-routing-container-hide{
           height: 200px
           
       }
+
+
+      .leaflet-control-layers .leaflet-control-layers-expanded .leaflet-timeline-control .leaflet-control {
+        box-sizing: border-box;
+        padding: 100px;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+        color: #555;
+
+      }
+      
     
     .sldr-ctrl-container {
           justify-content: center;
           text-align: center;
+          padding: 10px;
       }
-    
+
+
     .button-container {
-        float:left;
+        float:middle;
         display:inline;
         margin: 0;
         position: absolute;
         top: 80%;
-        left: 10%;
+        left: 50%;
     }
     
+    
     .time-slider {
-        float:right;
+        float:middle;
         display:inline;
-        margin: 0;
+        margin: 10;
         position: absolute;
         top: 50%;
-        left: 59%;
-        transform: translate(-50%, -50%);
+        left: 5%;
+        transform: translate(0%, -50%);
+        color: #555;
         
     }
     
@@ -53,18 +69,20 @@
         display:inline;
         margin: 0;
         position: absolute;
-        top: 50%;
-        left: 10%;
+        top: 40%;
+        left: 50%;
         transform: translate(-50%, -50%);
+        color: #555;
     }
     
     .time-text {
         float:middle;
         display:inline;
+        text-align: center;
         margin: 30;
         position: absolute;
-        top: 1%;
-        left: 50%;
+        top: 30%;
+        left: 35%;
         color: white;
         transform: translate(-50%, -50%);
     }
